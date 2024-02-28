@@ -1,0 +1,104 @@
+.myStocks {
+    margin-bottom: 4rem;
+}
+
+.myStocks__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+}
+
+.myStocks__paragraph {
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
+
+.myStocks__subHeading {
+    font-size: 2.625rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+}
+
+.myStocks__table {
+    border-collapse: collapse;
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 2.25rem;
+    width: 100%;
+}
+
+.myStocks__tableData {
+    box-sizing: border-box;
+    padding: 1rem 0.75rem;
+}
+
+.myStocks__tableData--ticker {
+    padding-left: 0;
+}
+
+.myStocks__tableData--company {
+    position: relative;
+    width: 100%;
+}
+
+.myStocks__tableData--company::after {
+    background-color: #DADADA;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 20%;
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    z-index: -10;
+}
+
+.myStocks__tableData--ratio {
+    padding-right: 0;
+    text-align: right;
+}
+
+.myStocks__company {
+    background-color: #FAFAFA;
+    display: block;
+    padding-right: 0.75rem;
+    width: fit-content;
+}
+
+.myStocks__unit {
+    font-size: 1.5rem;
+}
+
+.myStocks__present {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+    .myStocks__heading {
+        font-size: 2.25rem;
+        margin-left: -1.25rem;
+    }
+
+    .myStocks__subHeading {
+        font-size: 1.875rem;
+        margin-left: -1.25rem;
+    }
+
+    .myStocks__table {
+        font-size: 1.125rem;
+    }
+
+    .myStocks__tableData--company {
+        width: auto;
+    }
+
+    .myStocks__unit {
+        font-size: 1rem;
+    }
+
+    .myStocks__present {
+        font-size: 1rem;
+    }
+}

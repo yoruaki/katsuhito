@@ -1,0 +1,32 @@
+.selfIntroduction {
+    margin-bottom: 4rem;
+}
+
+.selfIntroduction__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+}
+
+.selfIntroduction__paragraph {
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
+
+.selfIntroduction__subHeading {
+    font-size: 2.625rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+}
+
+@media screen and (max-width: 600px) {
+    .selfIntroduction__heading {
+        font-size: 2.25rem;
+        margin-left: -1.25rem;
+    }
+
+    .selfIntroduction__subHeading {
+        font-size: 1.875rem;
+        margin-left: -1.25rem;
+    }
+}

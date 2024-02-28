@@ -1,0 +1,49 @@
+@keyframes fadeReveal {
+    to {
+        color: #333;
+        width: 5em;
+    }
+}
+
+@keyframes dot {
+    to {
+        color: #999;
+    }
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.header__heading {
+    color: transparent;
+    font-size: 3.75rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+
+.header__heading--animation {
+    animation: fadeReveal 0.75s steps(20, end) 0.125s forwards;
+}
+
+.header__headingDot {
+    color: transparent;
+}
+
+.header__heading--animation .header__headingDot {
+    animation: dot 0.25s ease-in 0.85s forwards;
+}
+
+.header__description {
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+    .header__heading {
+        font-size: 3rem;
+        margin-left: -1.25rem;
+    }
+}

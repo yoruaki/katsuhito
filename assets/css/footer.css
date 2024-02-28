@@ -1,0 +1,11 @@
+.footer__text {
+    font-size: 1.875rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+    .footer__text {
+        font-size: 1.25rem;
+    }
+}
