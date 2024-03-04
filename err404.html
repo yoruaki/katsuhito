@@ -10,14 +10,6 @@
         <link rel="stylesheet" href="/assets/css/footer.css">
         <link rel="stylesheet" href="/assets/css/header.css">
         <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
-        <script src="/assets/js/animation.js" defer></script>
-        <script src="https://www.googletagmanager.com/gtag/js?id=G-WNY4W41VES" defer></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WNY4W41VES');
-        </script>
     </head>
     <body>
         <header class="header">
@@ -34,5 +26,13 @@
             <p class="footer__text">Date of domain registration: <time datetime="2010-08-22">August 22, 2010</time>.</p>
             <p class="footer__text">© 2010 <a href="https://katsuhi.to">Katsuhi.to</a></p>
         </footer>
+        <script>document.querySelector('.header__heading').classList.add('header__heading--animation');</script>
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-WNY4W41VES"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WNY4W41VES');
+        </script>
     </body>
 </html>
