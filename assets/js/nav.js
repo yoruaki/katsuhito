@@ -1,42 +1,53 @@
-const heading = document.querySelector('.header__heading');
-const nav = document.querySelector('.header__nav');
-const btn = nav.querySelector('.header__navButton');
-const menu = nav.querySelector('.header__navList');
-const tabbableElms = [btn, ...menu.querySelectorAll('.header__navLink')];
+const elms = {
+    heading: document.querySelector('.header__heading'),
+    nav: document.querySelector('.header__nav'),
+    btn: document.querySelector('.header__navButton'),
+    menu: document.querySelector('.header__navList')
+};
+
+const tabbableElms = [
+    elms.btn,
+    ...elms.menu.querySelectorAll('.header__navLink')
+];
 
 const toggleMenu = () => {
-    const isOpen = nav.classList.toggle('header__nav--isOpen');
-    btn.setAttribute('aria-expanded', isOpen);
-    menu.toggleAttribute('inert', !isOpen);
+    const isOpen = elms.nav.classList.toggle('header__nav--isOpen');
+    updateAriaAttributes(isOpen);
 
-    if (isOpen) {
-        document.addEventListener('keydown', handleTabLoop);
-    } else {
-        document.removeEventListener('keydown', handleTabLoop);
-    }
+    document[isOpen ? 'addEventListener' : 'removeEventListener']('keydown', handleTabLoop);
+};
+
+const updateAriaAttributes = (isOpen) => {
+    elms.btn.setAttribute('aria-expanded', isOpen);
+    isOpen ? elms.menu.removeAttribute('aria-hidden') : elms.menu.setAttribute('aria-hidden', 'true');
 };
 
 const reapplyHeadingAnimation = () => {
-    heading.classList.remove('header__heading--animation');
+    elms.heading.classList.remove('header__heading--animation');
     setTimeout(() => {
-        void heading.offsetWidth; // Access offsetWidth to force a reflow
-        heading.classList.add('header__heading--animation');
+        // Force reflow
+        void elms.heading.offsetWidth;
+        elms.heading.classList.add('header__heading--animation');
     }, 400);
 };
 
 const closeMenuOnLinkClick = (evt) => {
-    if (evt.target.classList.contains('header__navLink')) {
-        // Reapply the animation only for top links
-        if (evt.target.classList.contains('header__navLink--top')) {
+    const target = evt.target;
+    if (target.classList.contains('header__navLink')) {
+        if (target.classList.contains('header__navLink--top')) {
             evt.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0 });
             reapplyHeadingAnimation();
-            // Remove '#' from the URL
             window.history.replaceState(null, null, window.location.pathname);
         }
-
         closeMenu();
     }
+};
+
+const closeMenu = () => {
+    elms.nav.classList.remove('header__nav--isOpen');
+    updateAriaAttributes(false);
+    document.removeEventListener('keydown', handleTabLoop);
 };
 
 const closeMenuOnEscape = (evt) => {
@@ -46,35 +57,26 @@ const closeMenuOnEscape = (evt) => {
 };
 
 const closeMenuOnOutsideClick = (evt) => {
-    if (!nav.contains(evt.target)) {
+    if (!elms.nav.contains(evt.target)) {
         closeMenu();
     }
 };
 
-const closeMenu = () => {
-    nav.classList.remove('header__nav--isOpen');
-    btn.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('inert', '');
-    document.removeEventListener('keydown', handleTabLoop);
-};
-
-// Loop focus with the Tab key
 const handleTabLoop = (evt) => {
     if (evt.key !== 'Tab') return;
 
-    const firstElement = tabbableElms[0];
-    const lastElement = tabbableElms[tabbableElms.length - 1];
+    const [firstElm, lastElm] = [tabbableElms[0], tabbableElms[tabbableElms.length - 1]];
 
-    if (evt.shiftKey && document.activeElement === firstElement) {
+    if (evt.shiftKey && document.activeElement === firstElm) {
         evt.preventDefault();
-        lastElement.focus();
-    } else if (!evt.shiftKey && document.activeElement === lastElement) {
+        lastElm.focus();
+    } else if (!evt.shiftKey && document.activeElement === lastElm) {
         evt.preventDefault();
-        firstElement.focus();
+        firstElm.focus();
     }
 };
 
-btn.addEventListener('click', toggleMenu);
-menu.addEventListener('click', closeMenuOnLinkClick);
+elms.btn.addEventListener('click', toggleMenu);
+elms.menu.addEventListener('click', closeMenuOnLinkClick);
 document.addEventListener('keydown', closeMenuOnEscape);
 document.addEventListener('click', closeMenuOnOutsideClick);
