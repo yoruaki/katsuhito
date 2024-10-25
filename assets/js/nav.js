@@ -38,6 +38,7 @@ const closeMenuOnLinkClick = (evt) => {
             evt.preventDefault();
             window.scrollTo({ top: 0 });
             reapplyHeadingAnimation();
+            // Remove `#` from the URL
             window.history.replaceState(null, null, window.location.pathname);
         }
         closeMenu();
@@ -62,6 +63,7 @@ const closeMenuOnOutsideClick = (evt) => {
     }
 };
 
+// Loop focus with the Tab key
 const handleTabLoop = (evt) => {
     if (evt.key !== 'Tab') return;
 
