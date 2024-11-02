@@ -7,9 +7,9 @@
         <title>Katsuhi.to</title>
         <link rel="stylesheet" href="./assets/css/_common.css">
         <link rel="stylesheet" href="./assets/css/assetManagement.css">
+        <link rel="stylesheet" href="./assets/css/beer.css">
         <link rel="stylesheet" href="./assets/css/footer.css">
         <link rel="stylesheet" href="./assets/css/header.css">
-        <link rel="stylesheet" href="./assets/css/myStocks.css">
         <link rel="stylesheet" href="./assets/css/selfIntroduction.css">
         <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml">
         <script src="./assets/js/nav.js" defer></script>
@@ -40,14 +40,7 @@
                         <a href="#assetManagement" class="header__navLink">Asset management</a>
                     </li>
                     <li class="header__navItem">
-                        <a href="#myStocks" class="header__navLink">My stocks</a>
-                    </li>
-                    <li class="header__navItem">
-                        <a href="#japaneseStocks" class="header__navLink header__navLink--subHeading">Japanese stocks
-                        </a>
-                    </li>
-                    <li class="header__navItem">
-                        <a href="#usStocks" class="header__navLink header__navLink--subHeading">US stocks</a>
+                        <a href="#beer" class="header__navLink">Beer🍻</a>
                     </li>
                 </ol>
             </nav>
@@ -55,8 +48,7 @@
         <main>
             <section class="selfIntroduction" id="selfIntroduction">
                 <h2 class="selfIntroduction__heading">Self-introduction</h2>
-                <p class="selfIntroduction__paragraph">Hello, my name is Katsuhito Shimaoka, and I am Japanese.</p>
-                <p class="selfIntroduction__paragraph">I was born in Yokohama on November 3, 1986, and I have lived here ever since. Currently, I have purchased a second-hand apartment in Yokohama, where I reside with my wife, two sons, and a daughter.</p>
+                <p class="selfIntroduction__paragraph">Hello, my name is Katsuhito Shimaoka, and I am Japanese. I live in Yokohama with my wife and three children.</p>
                 <div id="jobAndInterests">
                     <h3 class="selfIntroduction__subHeading">Job and Interests</h3>
                     <p class="selfIntroduction__paragraph">I am a web developer working at an IT company. The main languages I use are HTML, CSS, and JavaScript. Recently, I have also become interested in web accessibility.</p>
@@ -73,99 +65,9 @@
                 <p class="assetManagement__paragraph">In addition to working at an IT company, I am also an investor, engaging in stock market investments in both Japan and the United States, real estate investments, and solar power investments. As part of this, I established a private company and became CEO.</p>
                 <p class="assetManagement__paragraph">My goal is to increase my passive income, aiming for financial independence that is not reliant on manual labor.</p>
             </section>
-            <aside class="myStocks" id="myStocks">
-                <h2 class="myStocks__heading">My stocks</h2>
-                <p class="myStocks__paragraph">The percentage of shares I own is as follows:</p>
-                <div id="japaneseStocks">
-                    <h3 class="myStocks__subHeading">Japanese stocks</h3>
-                    <table class="myStocks__table">
-                        <tbody class="myStocks__tableBody">
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">9432</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Nippon Telegraph and Telephone Corporation</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">41.03<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">2914</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Japan Tobacco Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">21.15<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">7974</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Nintendo Co., Ltd.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">10.69<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">4578</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Otsuka Holdings Co., Ltd.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">8.23<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">9513</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Electric Power Development Co., Ltd.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">8.14<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">7906</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Yonex Co., Ltd.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">7.28<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">8593</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Mitsubishi HC Capital Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">3.48<span class="myStocks__unit">%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="usStocks">
-                    <h3 class="myStocks__subHeading">US stocks</h3>
-                    <table class="myStocks__table">
-                        <tbody class="myStocks__tableBody">
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">VZ</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Verizon Communications Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">39.19<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">PRU</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Prudential Financial, Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">16.45<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">MCD</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">McDonald's Corporation</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">13.17<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">ABBV</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">AbbVie Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">8.51<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">PEP</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">PepsiCo, Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">8.17<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">PG</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">The Procter &amp; Gamble Company</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">7.58<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">MO</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">Altria Group, Inc.</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">4.07<span class="myStocks__unit">%</span></td>
-                            </tr>
-                            <tr class="myStocks__tableRow">
-                                <td class="myStocks__tableData myStocks__tableData--ticker">KO</td>
-                                <td class="myStocks__tableData myStocks__tableData--company"><span class="myStocks__company">The Coca-Cola Company</span></td>
-                                <td class="myStocks__tableData myStocks__tableData--ratio">2.86<span class="myStocks__unit">%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="myStocks__present">As of <time datetime="2024-03-31">March 31, 2024</time>.</p>
+            <aside class="beer" id="beer">
+                <h2 class="beer__heading">Beer🍻</h2>
+                <p class="beer__paragraph">I love beer. I especially like <a href="https://hoegaarden.com/" target="_blank">Hoegaarden White</a> the best. If I could drink it every day, nothing would be more wonderful!</p>
             </aside>
         </main>
         <footer class="footer">

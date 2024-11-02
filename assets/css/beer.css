@@ -1,0 +1,21 @@
+.beer {
+    margin-bottom: 4rem;
+}
+
+.beer__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 0 2.25rem -2.25rem;
+}
+
+.beer__paragraph {
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
+
+@media screen and (max-width: 600px) {
+    .beer__heading {
+        font-size: 2.25rem;
+        margin-left: -1.25rem;
+    }
+}
